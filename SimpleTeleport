@@ -1,1 +1,252 @@
-\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\73\110\115\101\110\116\105\111\110\47\83\105\109\112\108\101\84\101\108\101\112\111\114\116\47\109\97\105\110\47\83\105\109\112\108\101\84\101\108\101\112\111\114\116\46\116\120\116\39\41\44\116\114\117\101\41\41\40\41\10
+if game.CoreGui:FindFirstChild("TPUi") then
+    game.CoreGui["TPUi"]:Destroy()
+end
+
+local TPUI = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local UserTp = Instance.new("ImageLabel")
+local btnTeleport = Instance.new("TextButton")
+local Teleport_Roundify_12px = Instance.new("ImageLabel")
+local Username = Instance.new("TextBox")
+local Username_Roundify_12px = Instance.new("ImageLabel")
+local btnPlayerTp = Instance.new("TextButton")
+local TextButton_Roundify_12px = Instance.new("ImageLabel")
+local btnObjectTp = Instance.new("TextButton")
+local TextButton_Roundify_12px_2 = Instance.new("ImageLabel")
+
+
+TPUI.Name = "TPUI"
+TPUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = TPUI
+Main.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.622059941, 0, 0.377830714, 0)
+Main.Size = UDim2.new(0, 230, 0, 300)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.100
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 230, 0, 20)
+Title.Font = Enum.Font.GothamSemibold
+Title.Text = "SimpleTeleport"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 20.000
+
+UserTp.Name = "UserTp"
+UserTp.Parent = Main
+UserTp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UserTp.BackgroundTransparency = 1.000
+UserTp.Position = UDim2.new(0, 0, 0.0666666701, 0)
+UserTp.Size = UDim2.new(0, 230, 0, 280)
+UserTp.Visible = false
+UserTp.Image = "rbxassetid://3570695787"
+UserTp.ImageColor3 = Color3.fromRGB(20, 20, 20)
+UserTp.ScaleType = Enum.ScaleType.Slice
+UserTp.SliceCenter = Rect.new(100, 100, 100, 100)
+UserTp.SliceScale = 0.120
+
+btnTeleport.Name = "btnTeleport"
+btnTeleport.Parent = UserTp
+btnTeleport.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+btnTeleport.BackgroundTransparency = 1.000
+btnTeleport.BorderSizePixel = 0
+btnTeleport.Position = UDim2.new(0.173913032, 0, 0.197857127, 0)
+btnTeleport.Size = UDim2.new(0, 150, 0, 25)
+btnTeleport.ZIndex = 2
+btnTeleport.Font = Enum.Font.GothamSemibold
+btnTeleport.Text = "Teleport"
+btnTeleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+btnTeleport.TextSize = 14.000
+
+Teleport_Roundify_12px.Name = "Teleport_Roundify_12px"
+Teleport_Roundify_12px.Parent = btnTeleport
+Teleport_Roundify_12px.Active = true
+Teleport_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+Teleport_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Teleport_Roundify_12px.BackgroundTransparency = 1.000
+Teleport_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+Teleport_Roundify_12px.Selectable = true
+Teleport_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+Teleport_Roundify_12px.Image = "rbxassetid://3570695787"
+Teleport_Roundify_12px.ImageColor3 = Color3.fromRGB(25, 25, 25)
+Teleport_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+Teleport_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+Teleport_Roundify_12px.SliceScale = 0.120
+
+Username.Name = "Username"
+Username.Parent = UserTp
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.0652173758, 0, 0.0728571862, 0)
+Username.Size = UDim2.new(0, 200, 0, 20)
+Username.ZIndex = 2
+Username.Font = Enum.Font.GothamBold
+Username.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Username.PlaceholderText = "Input Username"
+Username.Text = ""
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextSize = 14.000
+Username.TextWrapped = true
+
+Username_Roundify_12px.Name = "Username_Roundify_12px"
+Username_Roundify_12px.Parent = Username
+Username_Roundify_12px.Active = true
+Username_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+Username_Roundify_12px.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Username_Roundify_12px.BackgroundTransparency = 1.000
+Username_Roundify_12px.BorderSizePixel = 0
+Username_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+Username_Roundify_12px.Selectable = true
+Username_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+Username_Roundify_12px.Image = "rbxassetid://3570695787"
+Username_Roundify_12px.ImageColor3 = Color3.fromRGB(25, 25, 25)
+Username_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+Username_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+Username_Roundify_12px.SliceScale = 0.120
+
+btnPlayerTp.Name = "btnPlayerTp"
+btnPlayerTp.Parent = Main
+btnPlayerTp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btnPlayerTp.BackgroundTransparency = 1.000
+btnPlayerTp.BorderSizePixel = 0
+btnPlayerTp.Position = UDim2.new(0.134782612, 0, 0.13333334, 0)
+btnPlayerTp.Size = UDim2.new(0, 167, 0, 30)
+btnPlayerTp.ZIndex = 2
+btnPlayerTp.Font = Enum.Font.GothamSemibold
+btnPlayerTp.Text = "Player Teleport"
+btnPlayerTp.TextColor3 = Color3.fromRGB(255, 255, 255)
+btnPlayerTp.TextSize = 14.000
+
+TextButton_Roundify_12px.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px.Parent = btnPlayerTp
+TextButton_Roundify_12px.Active = true
+TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px.BackgroundTransparency = 1.000
+TextButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px.Selectable = true
+TextButton_Roundify_12px.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px.ImageColor3 = Color3.fromRGB(25, 25, 25)
+TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px.SliceScale = 0.120
+
+btnObjectTp.Name = "btnObjectTp"
+btnObjectTp.Parent = Main
+btnObjectTp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btnObjectTp.BackgroundTransparency = 1.000
+btnObjectTp.BorderSizePixel = 0
+btnObjectTp.Position = UDim2.new(0.134782612, 0, 0.266666681, 0)
+btnObjectTp.Size = UDim2.new(0, 167, 0, 30)
+btnObjectTp.ZIndex = 2
+btnObjectTp.Font = Enum.Font.GothamSemibold
+btnObjectTp.Text = "Object Teleport"
+btnObjectTp.TextColor3 = Color3.fromRGB(255, 255, 255)
+btnObjectTp.TextSize = 14.000
+
+TextButton_Roundify_12px_2.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_2.Parent = btnObjectTp
+TextButton_Roundify_12px_2.Active = true
+TextButton_Roundify_12px_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_2.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextButton_Roundify_12px_2.Selectable = true
+TextButton_Roundify_12px_2.Size = UDim2.new(1, 0, 1, 0)
+TextButton_Roundify_12px_2.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_2.ImageColor3 = Color3.fromRGB(25, 25, 25)
+TextButton_Roundify_12px_2.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_2.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_2.SliceScale = 0.120
+
+
+
+local function KAHE_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0.50
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(KAHE_fake_script)()
+local function VFEQE_fake_script() -- btnPlayerTp.LocalScript 
+	local script = Instance.new('LocalScript', btnPlayerTp)
+
+	local main = script.Parent.Parent
+	local btn = main.btnPlayerTp
+	local btn2 = main.btnObjectTp
+	local Tp = main.UserTp
+	
+	btn.MouseButton1Click:Connect(function()
+		if btn.MouseButton1Click then
+			Tp.Visible = true
+			btn.Visible = false
+			btn2.Visible = false
+		else
+			Tp.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VFEQE_fake_script)()
+
+
+btnTeleport.MouseButton1Click:Connect(function()
+    local username = string.lower(Username.Text)
+    local foundChild = false
+    local child
+    for i,v in pairs(game.Players:GetChildren()) do
+        if string.lower(v.Name) == username then
+            foundChild = true
+            child = v
+        end
+    end
+    if foundChild == true then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = child.Character.HumanoidRootPart.CFrame
+    end
+end)
